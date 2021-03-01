@@ -14,9 +14,7 @@ public class beta5 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        plan1 vista=new plan1();
-        plan1.setvisible(true); 
+    public static void main(String[] args ) {
     }
     
 }
