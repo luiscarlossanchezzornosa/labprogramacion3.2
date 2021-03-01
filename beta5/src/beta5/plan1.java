@@ -17,6 +17,10 @@ ArrayList<persona> lista=new ArrayList<persona>();
     public plan1() {
         initComponents();
        this.setLocationRelativeTo(null);
+       grupo1.add(rbmagesort);
+       grupo1.add(rbburbuja);
+       grupo2.add(rbedad);
+       grupo2.add(rbcedula);
     }
 
     /** This method is called from within the constructor to
@@ -29,6 +33,8 @@ ArrayList<persona> lista=new ArrayList<persona>();
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        grupo1 = new javax.swing.ButtonGroup();
+        grupo2 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtnombre = new javax.swing.JTextField();
@@ -275,6 +281,8 @@ public void mostrar()
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable datos;
+    private javax.swing.ButtonGroup grupo1;
+    private javax.swing.ButtonGroup grupo2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
