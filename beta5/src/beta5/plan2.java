@@ -14,10 +14,12 @@ import javax.swing.table.DefaultTableModel;
  */
 public class plan2 extends javax.swing.JFrame {
     DefaultTableModel modelo;
+    private int dato;
     /**
      * Creates new form plan2
      */
     
+         
     public plan2() {
         initComponents();
          this.setLocationRelativeTo(null);
@@ -30,10 +32,9 @@ public class plan2 extends javax.swing.JFrame {
        grupo1.add(rbburbuja);
        grupo2.add(rbedad);
        grupo2.add(rbcedula);
-        // bandera1=0;
-        // bandera2=0;
+       //int dato;
     }
-
+int bandera;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -68,6 +69,11 @@ public class plan2 extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(45, 79, 180));
 
         rbburbuja.setText("burbuja");
+        rbburbuja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbburbujaActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("caracteristicas");
         jLabel5.setOpaque(true);
@@ -80,10 +86,25 @@ public class plan2 extends javax.swing.JFrame {
         });
 
         rbedad.setText("edad");
+        rbedad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbedadActionPerformed(evt);
+            }
+        });
 
         rbcedula.setText("cedula");
+        rbcedula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbcedulaActionPerformed(evt);
+            }
+        });
 
         jbbuscar.setText("buscar");
+        jbbuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbbuscarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("nombre");
         jLabel1.setOpaque(true);
@@ -104,18 +125,35 @@ public class plan2 extends javax.swing.JFrame {
         jLabel4.setOpaque(true);
 
         rbmagesort.setText("magesort");
+        rbmagesort.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbmagesortActionPerformed(evt);
+            }
+        });
 
+        datos = new javax.swing.JTable(){
+            public boolean isCellEditable(int rowIndex,int colIndex){
+                return false;
+            }
+        };
         datos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "nombre", "edad", "cedula"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        datos.getTableHeader().setResizingAllowed(false);
+        datos.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(datos);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -147,7 +185,8 @@ public class plan2 extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -172,13 +211,11 @@ public class plan2 extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(rbedad)
-                        .addGap(48, 48, 48)
-                        .addComponent(rbcedula)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jbbuscar)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1))
-                .addContainerGap())
+                        .addComponent(rbcedula)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbbuscar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -207,9 +244,64 @@ public class plan2 extends javax.swing.JFrame {
     }//GEN-LAST:event_jbingresarActionPerformed
 
     private void txtnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtnombreActionPerformed
 
+    private void rbmagesortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmagesortActionPerformed
+      bandera1:
+        ;
+    }//GEN-LAST:event_rbmagesortActionPerformed
+ public void magesort(){
+    
+}
+    private void jbbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbbuscarActionPerformed
+ /**
+switch(dato){
+    case 1:
+        if (this.bandera1   && this.bandera3) 
+        {
+            
+        break;
+        }
+    case 2:
+        if (this.bandera1   && this.bandera4) 
+        {
+            
+        break;
+        }
+    case 3:
+        if (bandera2   && bandera3) 
+        {
+            
+        break;
+        }
+    case 4:
+        if (bandera2   && bandera4) 
+        {
+            
+        break;
+        }
+}     
+     **/
+    }//GEN-LAST:event_jbbuscarActionPerformed
+
+    private void rbburbujaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbburbujaActionPerformed
+        bandera2:
+        ;
+    }//GEN-LAST:event_rbburbujaActionPerformed
+
+    private void rbedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbedadActionPerformed
+      bandera3:
+        ;
+    }//GEN-LAST:event_rbedadActionPerformed
+
+    private void rbcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcedulaActionPerformed
+      bandera4:
+        ;
+    }//GEN-LAST:event_rbcedulaActionPerformed
+ public void burbuja(){
+    
+}
     /**
      * @param args the command line arguments
      */
@@ -266,4 +358,6 @@ public class plan2 extends javax.swing.JFrame {
     private javax.swing.JTextField txtedad;
     private javax.swing.JTextField txtnombre;
     // End of variables declaration//GEN-END:variables
+
+    
 }
