@@ -11,6 +11,19 @@ package beta5;
  */
 public class persona {
     String nombre,edad;
+    int modelos;
+
+    public persona(int modelo) {
+        this.modelos = modelo;
+    }
+
+    public int getModelo() {
+        return modelos;
+    }
+
+    public void setModelo(int modelo) {
+        this.modelos = modelo;
+    }
 
     public String getNombre() {
         return nombre;

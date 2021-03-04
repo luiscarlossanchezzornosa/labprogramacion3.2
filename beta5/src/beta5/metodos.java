@@ -10,7 +10,9 @@ package beta5;
  *
  * @author paule
  */
-public class metodos 
+
+public class metodos  
+       
  {  
 public void margersort(){
     orden mg=new orden();

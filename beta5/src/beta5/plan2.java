@@ -15,6 +15,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class plan2 extends javax.swing.JFrame {
     DefaultTableModel modelo;
+    metodos dt =new metodos();
      int dato;
      int bandera;
     /**
@@ -132,7 +133,7 @@ public class plan2 extends javax.swing.JFrame {
         };
         datos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null}
+
             },
             new String [] {
                 "nombre", "edad", "cedula"
@@ -285,7 +286,6 @@ public class plan2 extends javax.swing.JFrame {
    }
  }
 }*/
-
 modelo.removeRow(dato);
     }//GEN-LAST:event_jbbuscarActionPerformed
 
@@ -360,7 +360,4 @@ modelo.removeRow(dato);
     private javax.swing.JTextField txtedad;
     private javax.swing.JTextField txtnombre;
     // End of variables declaration//GEN-END:variables
-
-   
-    
 }
