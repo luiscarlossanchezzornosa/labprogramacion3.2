@@ -7,6 +7,7 @@ package beta5;
 
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.JTableHeader;
 
 /**
  *
@@ -31,7 +32,6 @@ public class plan2 extends javax.swing.JFrame {
        grupo1.add(rbmagesort);
        grupo1.add(rbburbuja);
        grupo2.add(rbedad);
-       grupo2.add(rbcedula);
        //int dato;
     }
 int bandera;
@@ -51,7 +51,6 @@ int bandera;
         jLabel5 = new javax.swing.JLabel();
         jbingresar = new javax.swing.JButton();
         rbedad = new javax.swing.JRadioButton();
-        rbcedula = new javax.swing.JRadioButton();
         jbbuscar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txtnombre = new javax.swing.JTextField();
@@ -89,13 +88,6 @@ int bandera;
         rbedad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rbedadActionPerformed(evt);
-            }
-        });
-
-        rbcedula.setText("cedula");
-        rbcedula.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbcedulaActionPerformed(evt);
             }
         });
 
@@ -163,7 +155,6 @@ int bandera;
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(rbcedula, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(rbedad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(rbmagesort, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -185,8 +176,8 @@ int bandera;
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -211,8 +202,6 @@ int bandera;
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(rbedad)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rbcedula)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbbuscar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -251,38 +240,31 @@ int bandera;
       bandera1:
         ;
     }//GEN-LAST:event_rbmagesortActionPerformed
- public void magesort(){
-    
-}
+
     private void jbbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbbuscarActionPerformed
- /**
-switch(dato){
+ boolean bandera1;
+    
+    boolean bandera2;
+    boolean bandera3;
+switch(this.dato){
     case 1:
-        if (this.bandera1   && this.bandera3) 
-        {
-            
+{
+    
+    if (bandera1   && bandera3)
+    {
+        
         break;
-        }
+    }
+}
     case 2:
-        if (this.bandera1   && this.bandera4) 
-        {
-            
-        break;
-        }
-    case 3:
         if (bandera2   && bandera3) 
         {
             
         break;
-        }
-    case 4:
-        if (bandera2   && bandera4) 
-        {
-            
-        break;
-        }
+        } 
 }     
-     **/
+persona=datos.gett
+ modelo.removeRow(dato);
     }//GEN-LAST:event_jbbuscarActionPerformed
 
     private void rbburbujaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbburbujaActionPerformed
@@ -291,17 +273,10 @@ switch(dato){
     }//GEN-LAST:event_rbburbujaActionPerformed
 
     private void rbedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbedadActionPerformed
-      bandera3:
+ bandera3:
         ;
     }//GEN-LAST:event_rbedadActionPerformed
 
-    private void rbcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcedulaActionPerformed
-      bandera4:
-        ;
-    }//GEN-LAST:event_rbcedulaActionPerformed
- public void burbuja(){
-    
-}
     /**
      * @param args the command line arguments
      */
@@ -351,7 +326,6 @@ switch(dato){
     private javax.swing.JButton jbbuscar;
     private javax.swing.JButton jbingresar;
     private javax.swing.JRadioButton rbburbuja;
-    private javax.swing.JRadioButton rbcedula;
     private javax.swing.JRadioButton rbedad;
     private javax.swing.JRadioButton rbmagesort;
     private javax.swing.JTextField txtcedula;
@@ -359,5 +333,6 @@ switch(dato){
     private javax.swing.JTextField txtnombre;
     // End of variables declaration//GEN-END:variables
 
+   
     
 }
