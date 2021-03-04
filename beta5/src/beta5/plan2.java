@@ -7,7 +7,7 @@ package beta5;
 
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
+
 
 /**
  *
@@ -15,26 +15,27 @@ import javax.swing.table.JTableHeader;
  */
 public class plan2 extends javax.swing.JFrame {
     DefaultTableModel modelo;
-    private int dato;
+     int dato;
+     int bandera;
     /**
      * Creates new form plan2
      */
     
          
     public plan2() {
-        initComponents();
-         this.setLocationRelativeTo(null);
+       initComponents();
+       this.setLocationRelativeTo(null);
        modelo=new DefaultTableModel();
        modelo.addColumn("nombre");
        modelo.addColumn("edad");
        modelo.addColumn("cedula");  
-       this.datos.setModel(modelo);
+       datos.setModel(modelo);
        grupo1.add(rbmagesort);
        grupo1.add(rbburbuja);
        grupo2.add(rbedad);
-       //int dato;
+       grupo2.add(rbcedula);
     }
-int bandera;
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -62,6 +63,7 @@ int bandera;
         rbmagesort = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         datos = new javax.swing.JTable();
+        rbcedula = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -130,7 +132,7 @@ int bandera;
         };
         datos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null}
             },
             new String [] {
                 "nombre", "edad", "cedula"
@@ -147,6 +149,13 @@ int bandera;
         datos.getTableHeader().setResizingAllowed(false);
         datos.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(datos);
+
+        rbcedula.setText("cedula");
+        rbcedula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbcedulaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -167,7 +176,8 @@ int bandera;
                     .addComponent(rbburbuja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbingresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbbuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbbuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(rbcedula, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -176,8 +186,7 @@ int bandera;
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -202,8 +211,11 @@ int bandera;
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(rbedad)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbbuscar)))
+                        .addGap(7, 7, 7)
+                        .addComponent(rbcedula)
+                        .addGap(12, 12, 12)
+                        .addComponent(jbbuscar))
+                    .addComponent(jScrollPane1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -237,45 +249,60 @@ int bandera;
     }//GEN-LAST:event_txtnombreActionPerformed
 
     private void rbmagesortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmagesortActionPerformed
-      bandera1:
-        ;
+    bandera1:
+    ;
     }//GEN-LAST:event_rbmagesortActionPerformed
 
     private void jbbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbbuscarActionPerformed
- boolean bandera1;
-    
-    boolean bandera2;
-    boolean bandera3;
-switch(this.dato){
-    case 1:
+/*switch(dato)
 {
-    
-    if (bandera1   && bandera3)
-    {
-        
-        break;
-    }
-}
-    case 2:
-        if (bandera2   && bandera3) 
-        {
-            
-        break;
-        } 
-}     
-persona=datos.gett
- modelo.removeRow(dato);
+ case 1:
+ {    
+  if (bandera1 && bandera3)
+   {
+    break;
+   }
+ }
+ case 2:
+ {    
+  if (bandera1 && bandera4)
+   {
+    break;
+   }
+ } 
+ case 3:
+ {    
+  if (bandera2 && bandera3)
+   {
+    break;
+   }
+ }
+ case 4:
+ {    
+  if (bandera2 && bandera4)
+   {
+    break;
+   }
+ }
+}*/
+
+modelo.removeRow(dato);
     }//GEN-LAST:event_jbbuscarActionPerformed
 
     private void rbburbujaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbburbujaActionPerformed
-        bandera2:
-        ;
+    bandera2:
+    ;
     }//GEN-LAST:event_rbburbujaActionPerformed
 
     private void rbedadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbedadActionPerformed
- bandera3:
-        ;
+    bandera3:
+    ;
     }//GEN-LAST:event_rbedadActionPerformed
+
+    private void rbcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbcedulaActionPerformed
+    bandera4:
+    ;
+    }//GEN-LAST:event_rbcedulaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -326,6 +353,7 @@ persona=datos.gett
     private javax.swing.JButton jbbuscar;
     private javax.swing.JButton jbingresar;
     private javax.swing.JRadioButton rbburbuja;
+    private javax.swing.JRadioButton rbcedula;
     private javax.swing.JRadioButton rbedad;
     private javax.swing.JRadioButton rbmagesort;
     private javax.swing.JTextField txtcedula;
