@@ -5,7 +5,11 @@
  */
 package beta5;
 
+import java.awt.ComponentOrientation;
 import java.util.ArrayList;
+import java.util.Locale;
+import javax.crypto.spec.PSource;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -15,8 +19,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class plan2 extends javax.swing.JFrame {
     DefaultTableModel modelo;
-    metodos dt =new metodos();
-     int dato;
+    public int dato;
      int bandera;
     /**
      * Creates new form plan2
@@ -235,14 +238,14 @@ public class plan2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbingresarActionPerformed
-      String []info=new String[3];
+      String[]info=new String[3];
       info[0]=txtnombre.getText();
       info[1]=txtedad.getText();
       info[2]=txtcedula.getText();
       modelo.addRow(info);
-      txtnombre.setText("");
-      txtedad.setText("");
-      txtcedula.setText("");
+      this.txtnombre.setText(" ");
+      this.txtedad.setText(" ");
+      this.txtcedula.setText(" ");
     }//GEN-LAST:event_jbingresarActionPerformed
 
     private void txtnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreActionPerformed
@@ -256,36 +259,38 @@ public class plan2 extends javax.swing.JFrame {
 
     private void jbbuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbbuscarActionPerformed
 /*switch(dato)
-{
- case 1:
- {    
-  if (bandera1 && bandera3)
-   {
-    break;
-   }
- }
- case 2:
- {    
-  if (bandera1 && bandera4)
-   {
-    break;
-   }
- } 
- case 3:
- {    
-  if (bandera2 && bandera3)
-   {
-    break;
-   }
- }
- case 4:
- {    
-  if (bandera2 && bandera4)
-   {
-    break;
-   }
- }
-}*/
+        {
+        case 1:
+        {
+        if (bandera1 && bandera3)
+        {
+        break;
+        }
+        }
+        case 2:
+        {
+        if (bandera1 && bandera4)
+        {
+        break;
+        }
+        }
+        case 3:
+        {
+        if (bandera2 && bandera3)
+        {
+        break;
+        }
+        }
+        case 4:
+        {
+        if (bandera2 && bandera4)
+        {
+        break;
+        }
+        }
+        }
+*/
+
 modelo.removeRow(dato);
     }//GEN-LAST:event_jbbuscarActionPerformed
 
@@ -340,7 +345,7 @@ modelo.removeRow(dato);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable datos;
+    public javax.swing.JTable datos;
     private javax.swing.ButtonGroup grupo1;
     private javax.swing.ButtonGroup grupo2;
     private javax.swing.JLabel jLabel1;

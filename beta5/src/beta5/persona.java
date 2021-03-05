@@ -10,20 +10,8 @@ package beta5;
  * @author paule
  */
 public class persona {
-    String nombre,edad;
-    int modelos;
-
-    public persona(int modelo) {
-        this.modelos = modelo;
-    }
-
-    public int getModelo() {
-        return modelos;
-    }
-
-    public void setModelo(int modelo) {
-        this.modelos = modelo;
-    }
+    String nombre;
+int modelo,edad,cedula;
 
     public String getNombre() {
         return nombre;
@@ -33,16 +21,37 @@ public class persona {
         this.nombre = nombre;
     }
 
-    public String getEdad() {
+    public int getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(int modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(String edad) {
+    public void setEdad(int edad) {
         this.edad = edad;
     }
-    public persona(String nombre, String edad, String cedula) {
+
+    public int getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(int cedula) {
+        this.cedula = cedula;
+    }
+
+    public persona(String nombre, int modelo, int edad, int cedula) {
         this.nombre = nombre;
+        this.modelo = modelo;
         this.edad = edad;
-       
+        this.cedula = cedula;
     }
+    
+       
+    
 }

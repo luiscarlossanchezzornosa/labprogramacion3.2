@@ -11,18 +11,15 @@ package beta5;
  * @author paule
  */
 
-public class metodos  
-       
- {  
+public class metodos{  
 public void margersort(){
     orden mg=new orden();
     int []modelo={};
     int [] arrayordenado=mg.magesort(modelo);
     for(int i=0;i<modelo.length;i++)
-        {
-            
+        {      
         }
-}
+ }
    public void burbuja() 
     {
      int [] modelos={};
@@ -30,10 +27,9 @@ public void margersort(){
      o.ordenburbuja(modelos);
       for(int i=0;i<modelos.length;i++);
      {
-     
      }
     }
- }  
+}  
 
 
 
